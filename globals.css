@@ -1,0 +1,63 @@
+# Ruuf Design Studio
+
+A refined, minimal, architecturally considered landing page for RUUF DESIGN STUDIO — a Lahore-based spatial design practice.
+
+## Design Philosophy
+
+- **Material, unhurried, and precise** — closer to a Neri&Hu monograph than a portfolio template
+- Zero agency-website energy. No gradients, no playful motion, no stock renders.
+- Every surface earns its place.
+- The site feels like walking through a space that has been thought about very carefully: quiet, resolved, nothing decorative.
+
+## Brand Palette
+
+- **Plaster** `#F2EDE6` — primary background, warm off-white
+- **Charcoal** `#2B2B2B` — primary text, dark sections
+- **Travertine** `#D4C9B8` — secondary backgrounds, borders
+- **Concrete** `#A09A93` — muted text, inactive states
+- **Basalt** `#4A4744` — mid-tone, hover states, dividers
+
+## Typography
+
+- **Display / Wordmark**: "ruuf" custom logotype
+- **Section headings**: Tracked caps, geometric sans (Inter), 12–14px, weight 400
+- **Body / editorial**: Cormorant Garamond Light, 16–20px
+- **Captions / nav / labels**: Inter, 11–12px, letter-spacing 0.15em, uppercase
+
+## Sections
+
+1. **Hero** — Full-bleed photograph, bottom-left wordmark, no headline overlay
+2. **Work** — Two-column project grid with category filter, hover reveals project info
+3. **Studio** — Two-column: atelier photograph + gallery-style statement
+4. **Process** — Horizontal scroll on Charcoal background, five stages with outlined numerals
+5. **Selected Objects** — Draggable horizontal strip of furniture/object photography
+6. **Contact** — Travertine background, no form, email/Instagram/location links
+7. **Footer** — Single line, Charcoal background
+
+## Tech Stack
+
+- Next.js 14 (App Router, TypeScript)
+- Tailwind CSS with arbitrary values
+- Framer Motion — useScroll, useTransform, useInView, drag with inertia
+- No UI libraries — pure custom components
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+Build for production:
+```bash
+npm run build
+```
+
+## Motion System
+
+- Page entry: Staggered fade-in from opacity 0
+- Project grid hover: opacity transition only — no lift, no scale, no card shadow
+- Process scroll: smooth horizontal translate driven by scroll position
+- Object strip: inertia drag — momentum continues 300ms after release
+- Nav hover rule: scaleX from 0 to 1, transform-origin left, 200ms
+- Easing standard: `cubic-bezier(0.16, 1, 0.3, 1)` — exhaled, never bouncy
